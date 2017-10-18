@@ -1,0 +1,50 @@
+---
+title: Barplots
+author: Katie Reisinger
+date: '2017-10-18'
+slug: barplots
+categories:
+  - data visualization
+  - ploting data
+  - R
+tags:
+  - R Markdown
+  - plot
+---
+
+This post will display how to create a barplot in RStudio. In this example we will look at homerun distribution for the year of 1980. First you have to install the Lahman, sqldf, and ggplot2 packages. Next bring them in by doing the following:
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+###Extracting the Data
+
+Next, we need to extract the data that we would like to be in our plot by creating the query below:
+
+```{r}
+query<-"SELECT name,HR
+FROM Teams
+WHERE yearID=1980
+ORDER BY HR"
+
+result<-sqldf(query)
+
+result$name<-factor(result$name,levels=result$name)
+```
+
+###Visualizing the Data
+
+Finally, we can create the plot by using the following commands:
+
+```{r}
+ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat='identity',color="blue",fill="white")+
+  coord_flip()+
+  ylab("homeruns")+
+  xlab("team")+
+  ggtitle("1980 Team Homerun Distribution")
+```
+

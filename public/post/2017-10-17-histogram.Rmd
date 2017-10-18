@@ -1,0 +1,44 @@
+---
+title: Histogram
+author: Katie Reisinger
+date: '2017-10-17'
+slug: histogram
+categories:
+  - data visualization
+  - ploting data
+  - R
+tags:
+  - plot
+  - R Markdown
+---
+
+This post will display how to create a histogram in RStudio. A histogram consits of 1 column of numerical data on the x-axis. In this example we will look at the weight distribution among baseball players. First you have to install the Lahman, sqldf, and ggplot2 packages. Next bring them in by doing the following:
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+
+###Extracting the Data
+
+Next, we need to extract the data that we would like to be in our plot by creating the query below:
+
+```{r}
+query<-"SELECT weight
+FROM Master"
+
+result<-sqldf(query)
+```
+
+###Visualizing the Data
+
+Finally, we can create the plot by using the following commands:
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=50)+
+  ggtitle("Body-Weight Distribution for Baseball Players")
+```
+

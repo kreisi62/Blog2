@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plot on Katie&#39;s Data Science Blog</title>
+    <link>/tags/plot/</link>
+    <description>Recent content in Plot on Katie&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Wed, 18 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Barplots</title>
+      <link>/post/barplots/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/barplots/</guid>
+      <description>This post will display how to create a barplot in RStudio. In this example we will look at homerun distribution for the year of 1980. First you have to install the Lahman, sqldf, and ggplot2 packages. Next bring them in by doing the following:
+library(Lahman)library(sqldf)## Loading required package: gsubfn## Loading required package: proto## Loading required package: RSQLitelibrary(ggplot2)Extracting the DataNext, we need to extract the data that we would like to be in our plot by creating the query below:</description>
+    </item>
+    
+    <item>
+      <title>Histogram</title>
+      <link>/post/histogram/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/histogram/</guid>
+      <description>This post will display how to create a histogram in RStudio. A histogram consits of 1 column of numerical data on the x-axis. In this example we will look at the weight distribution among baseball players. First you have to install the Lahman, sqldf, and ggplot2 packages. Next bring them in by doing the following:
+library(Lahman)library(sqldf)## Loading required package: gsubfn## Loading required package: proto## Loading required package: RSQLitelibrary(ggplot2)Extracting the DataNext, we need to extract the data that we would like to be in our plot by creating the query below:</description>
+    </item>
+    
+    <item>
+      <title>Scatterplots</title>
+      <link>/post/scatterplots/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/scatterplots/</guid>
+      <description>This post is a tutorial on how to use data visualization in RStudio to create a scatter plot. First you have to install the Lahman, sqldf, and ggplot2 packages. Next bring them in by doing the following:
+library(Lahman)library(sqldf)## Loading required package: gsubfn## Loading required package: proto## Loading required package: RSQLitelibrary(ggplot2)Extracting the DataNext, we need to extract the data that we would like to be in our plot by creating the query below:</description>
+    </item>
+    
+  </channel>
+</rss>
